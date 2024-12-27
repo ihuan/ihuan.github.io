@@ -1,0 +1,40 @@
+name: Deploy Hugo Blog to GitHub Pages
+
+on:
+  push:
+    branches:
+      - bookcloud # 替换为你的 Hugo 项目主分支名
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. 检出源码
+      - name: Checkout source code
+        uses: actions/checkout@v3
+
+      # 2. 安装 Hugo
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.55.6' # 或指定具体版本，如 '0.120.0 '
+
+      # 3. 构建 Hugo 项目
+      - name: bookcloud
+        run: hugo --minify
+
+       # 4. 检查构建文件
+      - name: Debug build output
+        run: ls -la ./public
+
+      # 4. 部署到 ihuan/ihuan.github.io
+      - name: Huan's GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          publish_dir: ./public
+          #destination_repo: ihuan/ihuan.github.io
+          external_repository: ihuan/ihuan.github.io
+          #EXTERNAL_REPOSITORY: ihuan/ihuan.github.io
+          PUBLISH_BRANCH: master
