@@ -42,7 +42,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: #0085a1;
+  color: #5A776A;
 }
 blockquote {
   color: #808080;
@@ -97,12 +97,12 @@ div.panel-body a.list-group-item.view-all {
 ::-moz-selection {
   color: white;
   text-shadow: none;
-  background: #0085a1;
+  background: #5A776A;
 }
 ::selection {
   color: white;
   text-shadow: none;
-  background: #0085a1;
+  background: #5A776A;
 }
 img::selection {
   color: white;
@@ -157,7 +157,7 @@ img {
 .navbar-custom .navbar-brand:focus ,
 .navbar-custom .nav li a:hover,
 .navbar-custom .nav li a:focus {
-  color: #0085a1;
+  color: #5A776A;
 }
 
 .navbar-custom .navbar-brand-logo {
@@ -357,7 +357,7 @@ footer .theme-by {
 .post-preview a:focus,
 .post-preview a:hover {
   text-decoration: none;
-  color: #0085a1;
+  color: #5A776A;
 }
 
 .post-preview .post-title {
@@ -642,8 +642,8 @@ footer .theme-by {
 .pager li a:hover,
 .pager li a:focus {
   color: #FFF;
-  background: #0085a1;
-  border: 1px solid #0085a1;
+  background: #5A776A;
+  border: 1px solid #5A776A;
 }
 
 .pager {
@@ -759,8 +759,8 @@ div.splitbox div.right {
 .disqus-comments button:hover, 
 .disqus-comments button:focus {
   color: #FFF;
-  background: #0085a1;
-  border: 1px solid #0085a1;
+  background: #5A776A;
+  border: 1px solid #5A776A;
 }
 
 /* Related posts */
